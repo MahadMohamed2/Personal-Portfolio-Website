@@ -37,11 +37,15 @@ export default function About({ about, skills }) {
 
   // Array to store lightbox image information
   const lightboxItems = [
-    about?.images?.map((item) => ({
-      src: urlFor(item.image.asset._ref), // Creates an array of image sources for the lightbox
-      title: item.title,
-      description: item.details,
-    })),
+    about?.images?.map((item) =>
+      item?.image !== undefined
+        ? {
+            src: urlFor(item?.image?.asset._ref), // Creates an array of image sources for the lightbox
+            title: item?.title,
+            description: item?.details,
+          }
+        : ""
+    ),
   ];
 
   return (
@@ -87,29 +91,33 @@ export default function About({ about, skills }) {
           modules={[Pagination]}
           style={{ width: "100%", height: "auto", marginTop: "30px" }}
         >
-          {about?.images?.map((item, i) => (
-            <SwiperSlide
-              style={{ cursor: "pointer" }}
-              key={i}
-              onClick={() =>
-                setLightbox({
-                  currentIndex: i,
-                  open: true,
-                })
-              }
-            >
-              <img
-                src={urlFor(item.image.asset._ref)}
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "6px",
-                  objectFit: "cover",
-                }}
-              />
-            </SwiperSlide>
-          ))}
+          {about?.images?.map((item, i) =>
+            item?.image !== undefined ? (
+              <SwiperSlide
+                style={{ cursor: "pointer" }}
+                key={i}
+                onClick={() =>
+                  setLightbox({
+                    currentIndex: i,
+                    open: true,
+                  })
+                }
+              >
+                <img
+                  src={urlFor(item?.image.asset._ref)}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "6px",
+                    objectFit: "cover",
+                  }}
+                />
+              </SwiperSlide>
+            ) : (
+              ""
+            )
+          )}
         </Swiper>
 
         <h3 className={styles.listName}>My Skills</h3>
