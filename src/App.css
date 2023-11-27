@@ -1,0 +1,124 @@
+.app {
+  background-image: url("./assets/bg.png");
+  background-size: 150px 150px;
+  background-position: 0 0;
+  min-height: 100vh;
+}
+
+/* home page svg animation */
+
+.path {
+  stroke-dasharray: 500px 100px;
+  animation: animate 100s linear infinite alternate-reverse;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 12433.8193359375;
+  }
+}
+
+blockquote {
+  font-size: 1.3em;
+  width: 100%;
+  margin: 50px auto;
+  font-style: italic;
+  color: var(--body-color);
+  padding: 1.2em 30px 1.2em 60px;
+  border-left: 6px solid var(--color-blue-light-2);
+  line-height: 1.4;
+  position: relative;
+  background-color: var(--body-bg);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: var(--color-blue-light-2);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+/* swiper carousel package styles */
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  text-align: center;
+  font-size: 0;
+  padding-top: 35px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: transparent;
+  transition: ease all 0.55s;
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  border: 2px solid var(--color-blue-light-2);
+  border-radius: 8px;
+  margin: 0 44px;
+}
+
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 20px;
+}
+
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  background-color: var(--color-blue-light-2);
+  width: 20px;
+}
+
+.yarl__slide_title {
+  padding-left: 60px !important;
+  font-size: 18px !important;
+}
+
+.yarl__no_scroll {
+  padding-right: 0px !important;
+  overflow: hidden !important;
+}
+
+.active {
+  color: #006ad5 !important;
+  transition: all 0.4s;
+}
+
+@keyframes colorChange {
+  from {
+    background-position: 0;
+    background-clip: text;
+  }
+  to {
+    background-position: 100000px;
+    background-clip: text;
+  }
+}

@@ -1,0 +1,72 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.wrapper {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form {
+  flex: 0.6;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label{
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--btn-color);
+}
+
+.imageContainer {
+  flex: 0.4;
+  width: 100%;
+  height: 40vh;
+  margin: 0 20px;
+  position: relative;
+}
+
+.imageContainer span img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  
+}
+
+@media screen and (max-width: 750px) {
+  .form {
+    flex: 1;
+  }
+  .imageContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .message {
+    padding: 50px 0;
+  }
+}

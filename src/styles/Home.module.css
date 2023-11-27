@@ -1,0 +1,94 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.intro h1 {
+  background: linear-gradient(
+    to right,
+    var(--linear-bg-end),
+    var(--linear-bg-start),
+    var(--linear-bg-end)
+  );
+  animation: colorChange 1000s infinite linear;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro p{
+  font-size: 1.1rem;
+}
+
+@keyframes colorChange {
+  from {
+    background-position: 0;
+    background-clip: text;
+  }
+  to {
+    background-position: 100000px;
+    background-clip: text;
+  }
+}
+
+.intro h2 {
+  margin-bottom: 0;
+}
+
+.intro button {
+  margin-top: 10px;
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+  }
+  .imageContainer {
+    width: 40vw;
+    height: 40vh;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .intro h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro h1 {
+    font-size: 4rem;
+  }
+  .imageContainer {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  .imageContainer {
+    width: 70vw;
+  }
+}

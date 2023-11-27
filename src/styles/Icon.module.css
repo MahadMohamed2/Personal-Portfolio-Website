@@ -1,0 +1,31 @@
+.icon {
+  background-color: transparent;
+  color: var(--icon-color);
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 1px solid var(--icon-border);
+  border-radius: 6px;
+  transition: all 200ms;
+}
+
+.icon svg {
+  font-size: 1rem;
+  stroke: var(--icon-stroke);
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon:hover {
+  background-color: var(--icon-hover-bg);
+  border-color: var(--icon-hover-border);
+}
+
+.icon:hover svg {
+  stroke: var(--icon-hover-stroke);
+}

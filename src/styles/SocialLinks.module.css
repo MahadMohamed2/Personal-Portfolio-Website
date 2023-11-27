@@ -1,0 +1,25 @@
+.icons {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.icons a {
+  border: none;
+  margin: 10px 0;
+}
+
+.icons a:before {
+  height: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .icons {
+    display: none;
+  }
+}

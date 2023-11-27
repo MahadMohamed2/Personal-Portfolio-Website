@@ -1,0 +1,37 @@
+.button {
+  min-width: 100px;
+  padding: 10px 25px;
+  border: 1px solid var(--btn-border);
+  font-weight: 600;
+  color: var(--btn-color);
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.button:hover {
+  border-color: var(--btn-hover-border);
+  color: var(--btn-hover-color);
+  background-color: var(--btn-hover-bg);
+}
+
+.iconButton {
+  padding: 0;
+}
+
+.fill {
+  border-color: transparent;
+  background-color: var(--btn-icon-bg);
+  color: var(--btn-icon-color);
+}
+
+.fill:hover {
+  background-color: var(--btn-icon-hover-bg);
+  color: var(--btn-icon-hover-color);
+}
+
+.big {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+}
