@@ -1,4 +1,10 @@
-.projects {
+
+@media (max-width: 768px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+}.projects {
   display: flex;
   min-height: 100vh;
   align-items: center;
