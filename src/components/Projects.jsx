@@ -29,9 +29,9 @@ export default function Projects({ projects, catList }) {
   const filterItems = (category) => {
     if (category == "All") return setProjectItems(projects);
 
-    const newProjectItems = projects?.filter(
-      (item) => item.category[0].title === category
-    );
+  const newProjectItems = projects?.filter(
+  (item) => item.categories.includes(category)
+);
 
     setProjectItems(newProjectItems);
   };
