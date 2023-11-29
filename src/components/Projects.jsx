@@ -60,12 +60,7 @@ export default function Projects({ projects, catList }) {
   }, [projects]);
 
   return (
-    <div
-      className={`${styles.projects} ${visible && "fadeBottom"}`}
-      style={{ "--delay": 5 }}
-      ref={ref}
-      id="projects"
-    >
+    <div className={`${styles.projects} ${visible && "fadeBottom"}`} style={{ "--delay": 5 }} ref={ref} id="projects">
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h2>Projects</h2>
@@ -110,6 +105,7 @@ export default function Projects({ projects, catList }) {
             ))}
           </ul>
         </div>
+
         <div className={styles.showcase}>
           {projectItems?.map((project, i) => (
             <Project key={i} project={project} reverse={!(i % 2)} />
