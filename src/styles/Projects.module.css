@@ -1,15 +1,8 @@
-
-@media (max-width: 768px) {
-  .projects {
-    display: flex;
-    flex-direction: column;
-  }
-}.projects {
+.projects {
   display: flex;
   min-height: 100vh;
   align-items: center;
   padding: 100px 0;
-  overflow-wrap: break-word;
 }
 
 .wrapper {
