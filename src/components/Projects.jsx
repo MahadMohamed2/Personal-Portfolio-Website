@@ -27,10 +27,10 @@ export default function Projects({ projects, catList }) {
 
   // This function works when you click on the categories in the Portfolio section. We filter portfolio items by category
   const filterItems = (category) => {
-    if (category === "All") return setProjectItems(projects);
+    if (category == "All") return setProjectItems(projects);
 
-    const newProjectItems = projects?.filter((item) =>
-      item.categories.includes(category)
+    const newProjectItems = projects?.filter(
+      (item) => item.category[0].title === category
     );
 
     setProjectItems(newProjectItems);
@@ -40,12 +40,10 @@ export default function Projects({ projects, catList }) {
   useEffect(() => {
     // Group data by categories
     const groupedByCategory = projects?.reduce((acc, project) => {
-      project.categories.forEach((category) => {
-        if (!acc[category]) {
-          acc[category] = [];
-        }
-        acc[category].push(project);
-      });
+      if (!acc[project.category[0].title]) {
+        acc[project.category[0].title] = [];
+      }
+      acc[project.category[0].title].push(project);
       return acc;
     }, {});
 
