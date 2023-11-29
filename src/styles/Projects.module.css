@@ -87,20 +87,3 @@
   }
 }
 
-/* Responsive styling for project boxes */
-@media screen and (max-width: 768px) {
-  .projects {
-    padding: 20px; /* Adjust as needed for spacing on small screens */
-  }
-
-  .showcase {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .project {
-    width: 100%; /* Make each project box take full width on small screens */
-    margin-bottom: 20px; /* Adjust as needed for spacing between project boxes */
-  }
-}
