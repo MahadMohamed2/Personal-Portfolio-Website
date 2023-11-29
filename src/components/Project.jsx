@@ -4,7 +4,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import sanityClient from "../../sanity";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi";
-import { Truncate } from "../utils/TruncateText";
 
 /* A builder to be able to use images from sanity.io */
 const builder = imageUrlBuilder(sanityClient);
@@ -18,9 +17,9 @@ export default function Project({ project }) {
   return (
     <div className={`${styles.project}`}>
       <div className={styles.details}>
-        <h3>{Truncate(project?.title, 50)}</h3>
+        <h3>{project?.title}</h3>
         <div className={styles.description}>
-          {Truncate(project?.details, 300)}
+          {project?.details}
         </div>
         <div className={styles.tags}>
           {project?.tags?.map((tag, i) => (
